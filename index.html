@@ -33,7 +33,8 @@ background-size: cover;
                     <li> <a href="#home" onclick="seleccionar()" >Home</a></li>
                     <li> <a href="#about" onclick="seleccionar()" >About us</a></li>
                     <li> <a href="#rules" onclick="seleccionar()" >Rules</a></li>
-                    <li> <a href="#contact" onclick="seleccionar()" >Contact us</li>
+                    <li> <a href="#contact" onclick="seleccionar()" >Contact us</a></li>
+                    <li> <a href="#follow" onclick="seleccionar()" >Follow us</a></li>
                 </ul>
             </nav>
             <div class="nav-responsive" onclick="mostrarOcultarMenu()">
@@ -44,7 +45,7 @@ background-size: cover;
             </div>
         </header>
     </div>
-    <section id="Home" class="Home">
+    <section id="home" class="Home">
         <div class="titulo_prin">
             <div class="img_perfil">
                 <img src="images/profilepicture.jpeg" alt="You should see a sensei's picture">
@@ -53,7 +54,7 @@ background-size: cover;
             <h2>Sensei</h2>
         </div>
     </section>
-    <section id="aboutus" class="aboutus">
+    <section id="about" class="aboutus">
         <div class="contenido-seccion">
             <h2>About Us</h2>
             <p>Cobra Kai Karate is an American karate dojo originally established by John Kreese and Terrance "Terry" Silver after their return from the Vietnam war. Cobra Kai or The Way Of The Fist is an aggressive, strong, ruthless, and merciless style of karate. John Kreese learned hand-to-hand combat from Captain Turner, who learned Tang Soo Do from Kim Sun-Yung, founder of the style. Cobra Kai karate is heavily kick-oriented and focuses less on self-defense; instead, students are taught the best defense is more offense, diametrically opposed to Miyagi-Do Karate. It is known for the ruthless tactics that are taught to the students.</p>
@@ -68,35 +69,35 @@ background-size: cover;
         <div class="col">
             <h2>Rules</h2>
             <div class= "contenedor-rules">
-                <div class="rules">
+                <div class="rule-card" data-rule="1">
                     <span>STRIKE FIRST</span>
                 </div>
-                <div class="rules">
+                <div class="rule-card" data-rule="2">
                     <span>STRIKE HARD</span>
                 </div>
-                <div class="rules">
+                <div class="rule-card" data-rule="3">
                     <span>NO MERCY</span>
                 </div>
-                <div class="rules">
+                <div class="rule-card" data-rule="4">
                     <span>FEAR DOES NOT EXIST IN THIS DOJO</span>
                 </div>
-                <div class="rules">
+                <div class="rule-card" data-rule="5">
                     <span>PAIN DOES NOT EXIST IN THIS DOJO</span>
                 </div>
-                <div class="rules">
+                <div class="rule-card" data-rule="6">
                     <span>DEFEAT DOES NOT EXIST IN THIS DOJO</span>
                 </div>
-                <div class="rules">
+                <div class="rule-card" data-rule="7">
                     <span>THE ONLY PRONOUNS WE ACCEPT IN THIS DOJO ARE "SENSEI" AND "STUDENT"</span>
                 </div>
-                <div class="rules">
+                <div class="rule-card" data-rule="8">
                     <span>IN OUR DOJO, IN THE STREETS, IN COMPETITION: A MAN WHO CONFRONTS YOU IS THE ENEMY</span>
                 </div>
             </div>
         </div>
     </section>
     
-    <section id="Contact Us" class="contact">
+    <section id="contact" class="contact">
         <div class="contenido-seccion">
             <h2>Contact Us</h2>
             <div class="fila">
@@ -104,8 +105,7 @@ background-size: cover;
                     <input type="text" placeholder="Name" required>
                     <input type="text" placeholder="Phone" required>
                     <input type="text" placeholder="Email" required>
-                    <input type="text" placeholder="Message" required>
-                    <textarea name="" id="" cols="30" rows="10" placeholder="Contact Us" required></textarea>
+                    <textarea name="" id="cuadro" cols="30" rows="10" placeholder="Message" required></textarea>
                     <button>
                         Send<i class="fa-solid fa-paper-plane"></i>
                         <span class="overlay"></span>
@@ -135,30 +135,42 @@ background-size: cover;
     </section> 
     <footer>
     <p>Copyright © All Rights Reserved by Cobra Kai Dojo</p>
-    <div class="social-container">
+    <section id="follow" class="follow"></section>
+        <div class="social-container">
         <a href="https://instagram.com" class="instagram">
             <img src="images/ig.png" alt="">
         </a>
         <a href="https://facebook.com" class="facebook">
             <img src="images/fb.png" alt="">
         </a>
-        <a href="#" class="twitter">
+        <a href="https://www.x.com/" class="twitter">
             <img src="images/x.png" alt="">
         </a>
-        <a href="#" class="tiktok">
+        <a href="https://www.tiktok.com/" class="tiktok">
             <img src="images/tt.webp" alt="">
         </a>
     </div>
     </footer>
     <footer>
-        <a href="#inicio" class="arriba">
+        <a href="#home" class="arriba">
             <i class="fa-solid fa-angles-up"></i>
             <div class="img_footer">
                 <img src="images\arrow.png" alt="You should see an arrow">
             </div>
         </a>
     </footer>
-        
+
+
+<div id="modal-bg" class="modal-bg"></div>
+
+
+<div id="modal" class="modal-box">
+    <span id="modal-close" class="modal-close">X</span>
+    <h2 id="modal-title"></h2>
+    <p id="modal-text"></p>
+</div>
+
+<script src="function.js"></script>
 
 
 </body>

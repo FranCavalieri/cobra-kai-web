@@ -94,6 +94,7 @@ body {
     margin-top: 120px;
     text-align: center;
     border-radius: 100px;
+    box-shadow: 0 0 12px #c60f0f
 }
 
 .Home .titulo_prin img {
@@ -103,6 +104,7 @@ body {
     width: 80%;
     margin: auto;
     border-radius: 40%;
+    box-shadow: 0 0 12px #c60f0f
 }
 
 .Home .titulo_prin h1 {
@@ -195,7 +197,7 @@ body {
     align-items: center;
 }
 
-.rules .col .contenedor-rules .rules{
+.rules .col .contenedor-rules .rule-card{
     width: 150px;
     height: 100px;
     background-color: #c60f0f;
@@ -203,9 +205,10 @@ body {
     margin: 0 50px 50px 0;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
-    transition: .3s;
+    border: 3px solid #cac728;
+    padding: 18px;
+    box-shadow: 0 0 12px #cac728;
 }
 
 
@@ -240,15 +243,21 @@ body {
     position: relative;
 }
 
-.contact .col input, .contacto .col textarea{
-    display: block;
-    width: 100%;
+.contact .col input, .col textarea{
+
+    background-color: #111;        /* negro dojo */
+    color: #c60f0f;                /* rojo */
+    border: 3px solid #cac728;     /* borde amarillo */
+    border-radius: 10px;
     padding: 18px;
-    border: none;
-    margin-bottom: 20px;
-    background-color: #c60f0f;
-    color: #cac728;
     font-size: 18px;
+    resize: none;
+    box-shadow: 0 0 12px #cac728;
+}
+
+
+.contact .col textarea::placeholder {
+    color: #c60f0f;
 }
 
 .contact button{
@@ -304,6 +313,62 @@ body {
     margin-right: 30px;
 }
 
+/*************************/
+
+/* Fondo oscuro */
+.modal-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+    display: none;
+    z-index: 999;
+}
+
+/* Caja del modal */
+.modal-box {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #000;
+    border: 4px solid #cac728;
+    padding: 30px;
+    width: 400px;
+    max-width: 90%;
+    border-radius: 15px;
+    box-shadow: 0 0 25px #cac728;
+    display: none;
+    z-index: 1000;
+    text-align: center;
+}
+
+/* Título y texto */
+.modal-box h2 {
+    color: #cac728;
+    margin-bottom: 15px;
+}
+.modal-box p {
+    color: #c60f0f;
+    font-size: 18px;
+    line-height: 1.4;
+}
+
+/* Botón cerrar */
+.modal-close {
+    position: absolute;
+    top: 8px;
+    right: 12px;
+    color: #c60f0f;
+    font-size: 22px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/*********************/
+
 footer{
     background-color: #000000ed;
     color: #c60f0f;
@@ -343,6 +408,7 @@ footer .arriba img{
     top: -25px;
     border-radius: 50%;
     line-height: 50px;
+    box-shadow: 0 0 12px #c60f0f
 }
 
 .social-container {
